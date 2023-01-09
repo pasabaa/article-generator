@@ -28,4 +28,4 @@ Este generador de artículos tiene como principal función redactar pequeños bl
 
 ## Autor
 
-(@pasabaa)[https://github.com/pasabaa]
+[@pasabaa](https://github.com/pasabaa)
