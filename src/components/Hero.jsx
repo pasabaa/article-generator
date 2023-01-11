@@ -15,7 +15,7 @@ export const Hero = () => {
             info: 'La aplicación solo redactará artículos en idioma inglés y español.'
         },
         {
-            info: 'La aplicación depende de la API de OpenAI, por lo que estará limitada por los límites de uso y la disponibilidad de la API.'
+            info: 'La aplicación requiere que sea específica la descripción para tener un mejor resultado, por ello, se recomienda tener buena ortografía y redacción.'
         },
         {
             info: 'La aplicación no proporcionará sugerencias de corrección gramatical ni ortográfica.'

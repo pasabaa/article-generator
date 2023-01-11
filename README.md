@@ -1,4 +1,4 @@
-# Generador de artículos
+# WritePro
 
 ## Características
 
@@ -7,6 +7,8 @@ Este generador de artículos tiene como principal función redactar pequeños bl
 ## Limitaciones
 
 - La aplicación depende de la API de OpenAI, por lo que estará limitada por los límites de uso y la disponibilidad de la API.
+
+- La aplicación requiere que sea específica la descripción para tener un mejor resultado, por ello, se recomienda tener buena ortografía y redacción.
 
 - La calidad y precisión del artículo redactado por OpenAI pueden variar y no siempre será perfecta.
 
