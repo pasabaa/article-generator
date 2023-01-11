@@ -74,7 +74,7 @@ export const ArticleGenerator = () => {
       </form>
       {/* Mostramos el artículo redactado por OpenAI */}
       {loading && <span className='w-full flex justify-center items-center'><img width={100} height={100} src={loader} alt='Loading' /></span>}
-      {article && <textarea disabled className='px-4 my-4 text-box bg-transparent leading-relaxed w-full h-screen overflow-hidden resize-none'>{article}</textarea>}
+      {article && <textarea disabled className='px-4 my-4 text-box bg-transparent leading-relaxed w-full h-screen overflow-y resize-none'>{article}</textarea>}
     </section>
   );
 }
