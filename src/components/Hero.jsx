@@ -43,7 +43,7 @@ export const Hero = () => {
 
   return (
     <div className='px-4 pt-6 mt-16'>
-        <h1 className='text-4xl font-bold'>Generador de ideas, párrafos e información para artículos.</h1>
+        <h1 className='text-4xl font-bold font-serif'>Generador de ideas, párrafos e información para artículos.</h1>
         <p className='text-sm mt-2 leading-relaxed'>Crea diferentes ideas para tus artículos, además de brindarte información, puedes pedirle a la inteligencia artificial que genere características relacionadas con la redacción, gramática, etc. ¡Pruébala ya!</p>
         <button 
             title={show ? 'Ocultar' : 'Más información'} 
