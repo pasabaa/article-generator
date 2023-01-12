@@ -54,14 +54,6 @@ export const ArticleGenerator = () => {
     
   };
 
-const copyText = () => {
-
-  setTimeout(() => {
-    SetCopied(true);
-  }, 2000, SetCopied(false));
-
-}
-
 
   return (
     <section>
@@ -88,8 +80,8 @@ const copyText = () => {
       {loading && <span className='w-full flex justify-center items-center'><img width={100} height={100} src={loader} alt='Loading' /></span>}
       {article && 
         <>
-          <CopyToClipboard text={article} onCopy={copyText}>
-            <button title='Copiar' className='px-3 py-2 border border-black ml-4 mt-4 text-sm'>{copied ? 'Copiar' : 'Copiado'}</button>
+          <CopyToClipboard text={article} onCopy={()=>SetCopied(true)}>
+            <button title='Copiar' className='px-3 py-2 border border-black ml-4 mt-4 text-sm'>{copied ? 'Copiado' : 'Copiar'}</button>
           </CopyToClipboard>
           <textarea disabled className='px-4 mb-4 text-box bg-transparent leading-relaxed w-full h-96 overflow-y resize-none cursor-text'>{article}</textarea>
         </>
