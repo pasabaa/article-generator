@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import loader from '../assets/loader.svg'
 import { Configuration, OpenAIApi } from 'openai';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export const ArticleGenerator = () => {
 
@@ -11,7 +12,10 @@ export const ArticleGenerator = () => {
   const [article, setArticle] = useState('');
 
   const [loading, setLoading] = useState(false);
+
   const [error, setError] = useState(false);
+
+  const [copied, SetCopied] = useState(false);
 
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_API_KEY_OPENAI,
@@ -47,9 +51,17 @@ export const ArticleGenerator = () => {
     } else {
       setError(true);
     }
-
     
   };
+
+const copyText = () => {
+
+  setTimeout(() => {
+    SetCopied(true);
+  }, 2000, SetCopied(false));
+
+}
+
 
   return (
     <section>
@@ -74,7 +86,14 @@ export const ArticleGenerator = () => {
       </form>
       {/* Mostramos el artículo redactado por OpenAI */}
       {loading && <span className='w-full flex justify-center items-center'><img width={100} height={100} src={loader} alt='Loading' /></span>}
-      {article && <textarea disabled className='px-4 my-4 text-box bg-transparent leading-relaxed w-full h-screen overflow-y resize-none'>{article}</textarea>}
+      {article && 
+        <>
+          <CopyToClipboard text={article} onCopy={copyText}>
+            <button title='Copiar' className='px-3 py-2 border border-black ml-4 mt-4 text-sm'>{copied ? 'Copiar' : 'Copiado'}</button>
+          </CopyToClipboard>
+          <textarea disabled className='px-4 mb-4 text-box bg-transparent leading-relaxed w-full h-96 overflow-y resize-none cursor-text'>{article}</textarea>
+        </>
+      }
     </section>
   );
 }
