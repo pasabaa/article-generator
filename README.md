@@ -26,7 +26,16 @@ Este generador de artículos tiene como principal función redactar pequeños bl
 
 - La aplicación no proporcionará opciones de almacenamiento ni permitirá guardar el artículo redactado para su uso posterior.
 
-- La aplicación no proporcionará opciones de exportación ni permitirá guardar el artículo redactado en diferentes formatos.
+- La aplicación no proporcionará opciones de exportación ni permitirá guardar el artículo redactado en diferentes formatos
+
+## Instalación
+
+- Clona este repositorio `git clone https://github.com/pasabaa/article-generator.git`
+- Ahora entra a la carpeta del repositorio y ejecuta `npm install && npm run dev`
+  
+## Variables de Entorno
+
+`VITE_API_KEY_OPENAI= 1A2F23G...`
 
 ## Autor
 
